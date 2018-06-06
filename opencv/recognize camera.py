@@ -1,7 +1,7 @@
 import cv2
 
-face_haar = cv2.CascadeClassifier("C:/Program Files/opencv/sources/data/haarcascades/haarcascade_frontalface_default.xml")
-eye_haar = cv2.CascadeClassifier("C:/Program Files/opencv/sources/data/haarcascades/haarcascade_eye.xml")
+face_haar = cv2.CascadeClassifier("C:/Users/Luodai Yang/Anaconda3/Lib/site-packages/cv2/data/haarcascade_frontalface_default.xml")
+eye_haar = cv2.CascadeClassifier("C:/Users/Luodai Yang/Anaconda3/Lib/site-packages/cv2/data/haarcascade_eye.xml")
 
 cam = cv2.VideoCapture(0)
 

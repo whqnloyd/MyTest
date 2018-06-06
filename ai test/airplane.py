@@ -103,8 +103,8 @@ class Game():
 
         self.max_enemes = 1
         # 加载飞机、敌机图片
-        self.plane_image = pygame.image.load('plane.png').convert_alpha()
-        self.enemy_image = pygame.image.load('enemy.png').convert_alpha()
+        self.plane_image = pygame.image.load('picture/plane.png').convert_alpha()
+        self.enemy_image = pygame.image.load('picture/enemy.png').convert_alpha()
 
     def start(self):
         self.score = 0
