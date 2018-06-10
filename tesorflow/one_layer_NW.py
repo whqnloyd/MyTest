@@ -1,6 +1,6 @@
 import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
-mnist = input_data.read_data_sets("C:/Users/Luodai Yang/PycharmProjects/tensorflow test/MNIST_data/", one_hot=True)
+mnist = input_data.read_data_sets('MNIST_data/', one_hot=True)
 
 #回归模型 y=softmax(wx+b)
 x = tf.placeholder(tf.float32, [None, 784])
@@ -30,9 +30,10 @@ for i in range(1000):
 # 评估
 correct_prediction = tf.equal(tf.argmax(y1, 1), tf.argmax(y2, 1))
 accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
-print(sess.run(accuracy, feed_dict={x: mnist.test.images, y2: mnist.test.labels}))
+correct_rate = sess.run(accuracy, feed_dict={x: mnist.test.images, y2: mnist.test.labels})
+print('测试集正确率：%.2f' % (correct_rate * 100), '%')
 
 #保存训练好的模型
-model_path = "C:/Users/Luodai Yang/PycharmProjects/tensorflow test/model/mymodel"
+model_path = 'model/one_layer'
 saver = tf.train.Saver()
 save_path = saver.save(sess, model_path, global_step=1000)
