@@ -1,2 +1,2 @@
-model_checkpoint_path: "multiple_layers-1000"
-all_model_checkpoint_paths: "multiple_layers-1000"
+model_checkpoint_path: "CNN_MNIST-1000"
+all_model_checkpoint_paths: "CNN_MNIST-1000"
