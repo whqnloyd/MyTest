@@ -10,11 +10,20 @@ with open('data/test.txt', 'r') as f:
 print(sum)
 '''
 
-with open('data/test.txt', 'r') as f:
-    for i in range(2):
+
+def train_batch_x(f, num):
+    sum = []
+    for i in range(num):
         temp = f.readline()
         temp1 = temp.split('\t')
         temp1 = list(map(float, temp1))
-        temp1.extend(replace)
         sum.append(temp1)
-print(sum)
+    return sum
+
+with open('data/test.txt', 'r') as f:
+    text = []
+    for i in range(3):
+        batch_size = 1
+        x = train_batch_x(f, batch_size)
+        text.append(x)
+print(text)

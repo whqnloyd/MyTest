@@ -5,25 +5,23 @@ time_start = time.clock()
 
 
 # 读取下一批数据
-def train_batch_x(num):
+def train_batch_x(f, num):
     sum = []
-    with open('data/train_TCGA_x.txt', 'r') as f:
-        for i in range(num):
-            temp = f.readline()
-            temp1 = temp.split('\t')
-            temp1 = list(map(float, temp1))
-            sum.append(temp1)
+    for i in range(num):
+        temp = f.readline()
+        temp1 = temp.split('\t')
+        temp1 = list(map(float, temp1))
+        sum.append(temp1)
     return sum
 
 
-def train_batch_label(num):
+def train_batch_label(f, num):
     sum = []
-    with open('data/train_TCGA_label.txt', 'r') as f:
-        for i in range(num):
-            temp = f.readline()
-            temp1 = temp.split('\t')
-            temp1 = list(map(float, temp1))
-            sum.append(temp1)
+    for i in range(num):
+        temp = f.readline()
+        temp1 = temp.split('\t')
+        temp1 = list(map(float, temp1))
+        sum.append(temp1)
     return sum
 
 
@@ -71,14 +69,16 @@ sess = tf.InteractiveSession()
 sess.run(init)
 
 # 循环训练并评估
-for i in range(59):
-    batch_size = 3
-    train_step.run(feed_dict={x: train_batch_x(batch_size), labels: train_batch_label(batch_size)})
-    if i % 9 == 0:
-        train_accuracy = accuracy.eval(feed_dict={x: train_batch_x(batch_size), labels: train_batch_label(batch_size)})
-        print('训练集准确率：%.2f' % (train_accuracy * 100), '%')
-time_end = time.clock()
-print('训练时间：%g s' % (time_end - time_start))
+with open('data/train_TCGA_x.txt', 'r') as train_data:
+    with open('data/train_TCGA_label.txt', 'r') as train_labels:
+        for i in range(59):
+            batch_size = 3
+            train_step.run(feed_dict={x: train_batch_x(train_data, batch_size), labels: train_batch_label(train_labels, batch_size)})
+#            if i % 9 == 0:
+#                train_accuracy = accuracy.eval(feed_dict={x: train_batch_x(train_data, batch_size), labels: train_batch_label(train_labels, batch_size)})
+#                print('训练集准确率：%.2f' % (train_accuracy * 100), '%')
+        time_end = time.clock()
+        print('训练时间：%g s' % (time_end - time_start))
 
 # 测试集准确率
 test_size = 60
