@@ -86,7 +86,7 @@ sess.run(init)
 # 循环训练
 for i in range(5000):
     batch = mnist.train.next_batch(6)                                               # 一共60000个测试样本，每批次在50个时有99.2%的准确率
-    train_step.run(feed_dict={x: batch[0], labels: batch[1], keep_prob: 0.8})
+    train_step.run(feed_dict={x: batch[0], labels: batch[1], keep_prob: 1.0})
     if i % 1000 == 0:
         train_accuracy = accuracy.eval(feed_dict={x: batch[0], labels: batch[1], keep_prob: 1.0})
         print('训练集准确率：%.2f' % (train_accuracy * 100), '%')
