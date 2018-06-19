@@ -73,10 +73,12 @@ with open('data/train_TCGA_x.txt', 'r') as train_data:
     with open('data/train_TCGA_label.txt', 'r') as train_labels:
         for i in range(59):
             batch_size = 3
-            train_step.run(feed_dict={x: train_batch_x(train_data, batch_size), labels: train_batch_label(train_labels, batch_size)})
-#            if i % 9 == 0:
-#                train_accuracy = accuracy.eval(feed_dict={x: train_batch_x(train_data, batch_size), labels: train_batch_label(train_labels, batch_size)})
-#                print('训练集准确率：%.2f' % (train_accuracy * 100), '%')
+            xs = train_batch_x(train_data, batch_size)
+            ys = train_batch_label(train_labels, batch_size)
+            train_step.run(feed_dict={x: xs, labels: ys})
+            if i % 9 == 0:
+                train_accuracy = accuracy.eval(feed_dict={x: xs, labels: ys})
+                print('训练集准确率：%.2f' % (train_accuracy * 100), '%')
         time_end = time.clock()
         print('训练时间：%g s' % (time_end - time_start))
 
