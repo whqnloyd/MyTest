@@ -7,7 +7,7 @@ from tensorflow.contrib import rnn
 # 创建词汇表
 def create_vocab(text):
     vocab = list(set(text))
-    print('Words:', vocab)
+#    print('Words:', vocab)
     size = len(vocab)
     vocab2index = {}            # 从字符到位置索引
     index2vocab = {}            # 从位置索引到字符

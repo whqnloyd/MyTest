@@ -20,10 +20,12 @@ labels = tf.placeholder(tf.float32, [None, 10])
 
 # 单层
 layer1 = 128
+#n_layers = 2
 out_layer = 10
 
 # 自带有一个dropout
 lstm_cell = rnn.BasicLSTMCell(layer1, forget_bias=1.0)
+#cell = rnn.MultiRNNCell([lstm_cell for i in range(n_layers)])
 
 # 处理变长文本，减少计算量，也是一次执行多步，多次调用call
 outputs, final_state = tf.nn.dynamic_rnn(lstm_cell, x_reshape, dtype=tf.float32)
