@@ -1,9 +1,13 @@
+import image_description_copy
 
-def get_info(img):
-    return 'cat'
+img = 'https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13001000/Beagle-On-White-01-400x267.jpg'
+type, name, description = image_description_copy.recognize_image(img)
+#print(name)
 
-def generate_story():
-    with open('data/', 'r') as f:
-        one_line = f.readline()
+with open('data/story.txt', 'r') as f:
+    text = f.readlines()
 
-if (__name__ == '__main__'):
+for i in text:
+    temp = i.replace('_', name)
+    temp = temp.replace('\n', '')
+    print(temp)
