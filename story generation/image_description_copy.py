@@ -17,14 +17,14 @@ def recognize_image(img_path):
     results = response.json()
 
     #print information
-#    tags = results['description']['tags']
+    tags = results['description']['tags']
     description = results['description']['captions'][0]['text'].capitalize()
-    categories = results['categories'][0]['name']
-    temp = categories.split('_')
-    type = temp[0]
-    name = temp[1]
+#    categories = results['categories'][0]['name']
+#    temp = categories.split('_')
+#    type = temp[0]
+#    name = temp[1]
 
-    return type, name, description
+    return description, tags
 '''
     #save
     with open('data/image.txt', 'w') as f:
@@ -36,13 +36,14 @@ def recognize_image(img_path):
 '''
 #self test
 if (__name__ == '__main__'):
-    img = 'https://cdn8.bigcommerce.com/s-rj0z9yqukq/images/stencil/original/uploaded_images/sayslove.jpg?t=1518480203'
-    type, name, description = recognize_image(img)
+    img = 'https://s3.amazonaws.com/v2p-prod/db/image/website/74185/f3815050-c58c-46d4-860c-e35b66f09ff5.jpg'
+    description, tags = recognize_image(img)
     '''
     with open('data/image.txt', 'r') as img:
         img_text = img.read()
     print(img_text)
     '''
-    print(type)
-    print(name)
+#    print(type)
+#    print(name)
     print(description)
+    print(tags)

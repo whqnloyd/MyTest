@@ -1,0 +1,4 @@
+I see 1 animal_1.
+I see 1 animal_2.
+I see 1 animal_1 and 1 animal_2.
+1 animal_1 and 1 animal_2 I see.
