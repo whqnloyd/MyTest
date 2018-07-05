@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-cap = cv2.VideoCapture('video/selfdrivecopy.mp4')
+cap = cv2.VideoCapture('video/example.mp4')
 
 #改变探测区域
 def region_of_interest(imgs, vertices):

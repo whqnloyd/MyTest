@@ -6,7 +6,7 @@ import numpy as np
 import cv2
 import math
 
-cap = cv2.VideoCapture('video/example.mp4')
+cap = cv2.VideoCapture('video/test1.mp4')
 
 
 def region_of_interest(img, vertices):

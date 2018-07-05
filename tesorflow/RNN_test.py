@@ -68,49 +68,48 @@ class BatchGenerator(object):
         self.last_batch = batches[-1]
         return batches
 
-
-'''
-仅使用基础的RNN
-直接实例化一个BasicRNNCell对象
-隐含层的神经元数hidden_size
-网络的层数rnn_layers
-最终用MultiRNNCell封装起来。
-'''
+    '''
+    仅使用基础的RNN
+    直接实例化一个BasicRNNCell对象
+    隐含层的神经元数hidden_size
+    网络的层数rnn_layers
+    最终用MultiRNNCell封装起来。
+    '''
 # 构建模型
-def RNN():
-    layer1 = 128
-    rnn_layers = 2
+    def RNN(self):
+        layer1 = 128
+        rnn_layers = 2
 
-    lstm_cell = rnn.BasicRNNCell(layer1)
+        lstm_cell = rnn.BasicRNNCell(layer1)
 
-    cells = [lstm_cell]
-    for i in range(rnn_layers - 1):
-        higher_layer_cell = lstm_cell(layer1)
-        cells.append(higher_layer_cell)
-    multi_cell = rnn.BasicRNNCell(cells)
+        cells = [lstm_cell]
+        for i in range(rnn_layers - 1):
+            higher_layer_cell = lstm_cell(layer1)
+            cells.append(higher_layer_cell)
+        multi_cell = rnn.BasicRNNCell(cells)
 
-    # 初始化multicell
-    self.zero_state = multi_cell.zero_state(self.batch_size, tf.float32)
+        # 初始化multicell
+        self.zero_state = multi_cell.zero_state(self.batch_size, tf.float32)
 
 
-# 创建占位符，初始状态占位符，输入占位符和输出占位符
-def create_tuple_placeholders(inputs, shape):
-    if isinstance(shape, int):
-        result = tf.placeholder_with_default(inputs, list((None,)) + [shape])
-    else:
-        sub_placeholders = [create_tuple_placeholders(sub_inputs, sub_shape)
-                            for sub_inputs, sub_shape in zip(inputs, shape)]
-        t = type(shape)
-        if t == tuple:
-            result = t(sub_placeholders)
+    # 创建占位符，初始状态占位符，输入占位符和输出占位符
+    def create_tuple_placeholders(inputs, shape):
+        if isinstance(shape, int):
+            result = tf.placeholder_with_default(inputs, list((None,)) + [shape])
         else:
-            result = t(*sub_placeholders)
-    return result
+            sub_placeholders = [create_tuple_placeholders(sub_inputs, sub_shape)
+                                for sub_inputs, sub_shape in zip(inputs, shape)]
+            t = type(shape)
+            if t == tuple:
+                result = t(sub_placeholders)
+            else:
+                result = t(*sub_placeholders)
+        return result
 
-self.initial_state = create_tuple_placeholders(multi_cell.zero_state(self.batch_size, tf.float32),
-                                               shape=multi_cell.state_size)
-self.input_data = tf.placeholder(tf.int64, [self.batch_size, self.seq_length], name='inputs')
-self.targets = tf.placeholder(tf.int64, [self.batch_size, self.seq_length], name='targets')
+    self.initial_state = create_tuple_placeholders(multi_cell.zero_state(self.batch_size, tf.float32),
+                                                   shape=multi_cell.state_size)
+    self.input_data = tf.placeholder(tf.int64, [self.batch_size, self.seq_length], name='inputs')
+    self.targets = tf.placeholder(tf.int64, [self.batch_size, self.seq_length], name='targets')
 
-self.embedding = tf.get_variable('embedding', [vocab_size, embedding_size])
-inputs = tf.nn.embedding_lookup(self.embedding, self.input_data)
+    self.embedding = tf.get_variable('embedding', [vocab_size, embedding_size])
+    inputs = tf.nn.embedding_lookup(self.embedding, self.input_data)

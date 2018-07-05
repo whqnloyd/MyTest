@@ -15,8 +15,8 @@ encoded_index = np.array([vocab2index[c] for c in text],
                          dtype=np.int32)  # 文本转数码,[1.0, 2.0, 8.0, 24.0]
 
 '''
-vocab2index = {}            # 从字符到位置索引
-index2vocab = {}            # 从位置索引到字符
+vocab2index = {}                        # 从字符到位置索引
+index2vocab = {}                        # 从位置索引到字符
 for i, char in enumerate(vocab):
     vocab2index[char] = i
     index2vocab[i] = char
