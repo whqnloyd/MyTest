@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "pragmatic-armor-204719",
+  "private_key_id": "3d4453ab7572bdbcaf78c407cfc64b9137ffe748",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCWM7Dn4WxPa2N9\n2QPt4QBlnq8cgMmva5OrhNAdhggOLlXUPZ3MN4j/zUtYHI8IK/oUg7Ac6mcVXscq\ndN/ZI3m2CLAi4SjMwIxmBmmXgpvvYb2s3ItNrrgNZFE2tASzdX5UI1/FTtLxV1WF\nUYTv8BESyE/bEDTUJSfEwJWP7TWAWAbGCUfdWuCaYsTT2H7N9WhARMjUsuWQg/QJ\nLs12HTnIFhMywDvtWGP/ma7CXBmAHY5HlFy3SZ+dZ+Rjg1svqv3j3yRSJ+lClTOp\ntqi5tuHMucemBA6dpPr3+bnK5xV6dJhdq1oC/kASvbALWsS+9cdYq10aL7Y/pikS\nv9Ycj4qXAgMBAAECggEACLGdP7lbMjhJCJ5oYnsaMXI/OIB2gWInU0+GAZohxTsG\nr248P/ccRZIga6KGNOGMFrvjPwk3m5O3e3b1rfUmX6meaFEYB3dC/nTIj9h40Mub\ngEc+WOoQBSu/96abzwyx7zTM9PgHBakZw3RgeXLadM0wshanYtAeaSkB1H7VEJnx\nC0zHeqXjGLVWFC9eMSyI1B4zPRKTtxLxqimompyQh5UWsprqH0oxP8TbE7QaWPNx\nnNfMNf+x7rwBRpd2IJkDPLyA3FexEFxTWHcF+hamH7BgbzVSjFs2hUWTU4iuG+05\n0c9SjVFNnmYCSCH6SpHi/NLH85gajBFEcSocszz3wQKBgQDIJyYDgjJR8MeR/IJx\nbEezffDRgbAdh5OzHv4QKQ07OsPpaocGrJbwT8qgq82cMxwOE/WvGVWtHmFv/IM2\nvnLd3R9dXXGUw4p8biOmEJzta4GkaDy5a19c9pixEgdyX+LiEEWLid1ObjU9cgeS\nctSRsfyqtzYMeA28FPdTOxTquQKBgQDAHI9lVAwvYD3J6LHxoWHORSNUPDZ31tGc\nFRFULu3y7zPdf2irblsD+eb6byeXUxgA226Oc6ri2vJMRmCOE+AiKGuJK76Ddqtx\ntoKmFWXirOfdcWZkpmkOXFhD8hoa1FZ5zypNwU3qu/QcV1mxC7C3ZyAcw/j6koSv\nagopnfg3zwKBgFauDZprYht2aRdiAaPZPtwO6KHyxjCjrGVgQKsC/EXwVzPY/Iz5\nZYzBIYGfpbXFtJqsLjQchqwogg4bjz/ADsLipliqxSul222zzSB4BV4UttpagiHS\nzEPYT5wvsKXpvLomTdf2Zq82rzvjDEByFnjaWhAcs/2GaHxRoCKdbZuRAoGBAKHH\nK0ZkScKXpFDkoPzfLzL56+9iqWevwmJTJ32h64WZxC5xvZ4n14N4rfcVJdz7/4mx\nP9+8LhrN0B9FYMgkmqmJKk2gRdYFWAjxbgIYoO0LOFK1zUlTDcMnJrlJJoyTZaM8\nPt6tu0TCNKatNH2wX4eC03sF2SSBwDTL8nTrb3znAoGAGug5T3thcctpggTYljk9\nlAIInA8+5kSEgtKbJTIXynFtCfhJetRWWY4OPcHE7ysyoJVJFXDdcAUj/ccsmfkb\nKvr1wVo8PIdcj/hKLeS4Oxci4kI/F8Y+ztBOi0gjnt9gLDsMOXqCtwnrzsG575gZ\nRlMceE+FcefqiP1d/qZaoBE=\n-----END PRIVATE KEY-----\n",
+  "client_email": "whqnloyd@pragmatic-armor-204719.iam.gserviceaccount.com",
+  "client_id": "105838793692486273855",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/whqnloyd%40pragmatic-armor-204719.iam.gserviceaccount.com"
+}

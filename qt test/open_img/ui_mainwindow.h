@@ -35,6 +35,7 @@ public:
     QPushButton *Button_replay;
     QLabel *image;
     QLabel *text;
+    QLabel *grade;
     QMenuBar *menuBar;
     QMenu *menuVersion_1_0;
     QStatusBar *statusBar;
@@ -65,6 +66,9 @@ public:
         text = new QLabel(centralWidget);
         text->setObjectName(QStringLiteral("text"));
         text->setGeometry(QRect(80, 200, 311, 51));
+        grade = new QLabel(centralWidget);
+        grade->setObjectName(QStringLiteral("grade"));
+        grade->setGeometry(QRect(410, 10, 54, 51));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -95,6 +99,7 @@ public:
         Button_replay->setText(QApplication::translate("MainWindow", "Replay", Q_NULLPTR));
         image->setText(QString());
         text->setText(QString());
+        grade->setText(QString());
         menuVersion_1_0->setTitle(QApplication::translate("MainWindow", "Version 1.0", Q_NULLPTR));
     } // retranslateUi
 

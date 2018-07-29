@@ -17,13 +17,9 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    QImage *image;
 
 private slots:
-    void next_clicked();
-    void play_clicked();
-    void record_clicked();
-    void replay_clicked();
+    void on_pushButton_clicked();
 };
 
 #endif // MAINWINDOW_H

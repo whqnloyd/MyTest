@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2018-07-08T17:52:14
+# Project created by QtCreator 2018-07-23T21:35:42
 #
 #-------------------------------------------------
 
@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = open_img
+TARGET = python_test
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -31,10 +31,7 @@ HEADERS += \
         mainwindow.h \
 
 FORMS += \
-      mainwindow.ui
-
-RESOURCES += \
-          res.qrc
+        mainwindow.ui
 
 win32: LIBS += -L$$PWD/../../../../AppData/Local/Programs/Python/Python36/libs/ -lpython36
 
