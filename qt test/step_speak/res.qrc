@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>data/image/L1.jpg</file>
+        <file>data/text/L1.txt</file>
+        <file>data/text/speech.txt</file>
+        <file>data/image/icon_open.png</file>
+    </qresource>
+</RCC>

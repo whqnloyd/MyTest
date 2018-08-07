@@ -25,21 +25,27 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+    choose_lesson.cpp \
+    program_one.cpp
 
 HEADERS += \
-        mainwindow.h \
+    choose_lesson.h \
+    program_one.h \
+    ui_choose_lesson.h \
+    ui_program_one.h
 
 FORMS += \
-      mainwindow.ui
+    choose_lesson.ui \
+    program_one.ui
 
 RESOURCES += \
           res.qrc
 
-win32: LIBS += -L$$PWD/../../../../AppData/Local/Programs/Python/Python36/libs/ -lpython36
 
-INCLUDEPATH += $$PWD/../../../../AppData/Local/Programs/Python/Python36/include
-DEPENDPATH += $$PWD/../../../../AppData/Local/Programs/Python/Python36/include
+win32: LIBS += -L$$PWD/../../../AppData/Local/Programs/Python/Python36/libs/ -lpython36
 
-win32:!win32-g++: PRE_TARGETDEPS += $$PWD/../../../../AppData/Local/Programs/Python/Python36/libs/python36.lib
-else:win32-g++: PRE_TARGETDEPS += $$PWD/../../../../AppData/Local/Programs/Python/Python36/libs/libpython36.a
+INCLUDEPATH += $$PWD/../../../AppData/Local/Programs/Python/Python36/include
+DEPENDPATH += $$PWD/../../../AppData/Local/Programs/Python/Python36/include
+
+win32:!win32-g++: PRE_TARGETDEPS += $$PWD/../../../AppData/Local/Programs/Python/Python36/libs/python36.lib
+else:win32-g++: PRE_TARGETDEPS += $$PWD/../../../AppData/Local/Programs/Python/Python36/libs/libpython36.a

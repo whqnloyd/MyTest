@@ -1,8 +1,0 @@
-<RCC>
-    <qresource prefix="/image">
-        <file alias="L1_image">image/L1.jpg</file>
-    </qresource>
-    <qresource prefix="/text">
-        <file alias="L1_text">text/L1.txt</file>
-    </qresource>
-</RCC>

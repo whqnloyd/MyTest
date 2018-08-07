@@ -1,13 +1,13 @@
 /********************************************************************************
-** Form generated from reading UI file 'mainwindow.ui'
+** Form generated from reading UI file 'program_one.ui'
 **
 ** Created by: Qt User Interface Compiler version 5.6.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
 
-#ifndef UI_MAINWINDOW_H
-#define UI_MAINWINDOW_H
+#ifndef UI_PROGRAM_ONE_H
+#define UI_PROGRAM_ONE_H
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
@@ -20,16 +20,15 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
-class Ui_MainWindow
+class Ui_Program_One
 {
 public:
     QWidget *centralWidget;
-    QPushButton *Button_next;
+    QPushButton *Button_start;
     QPushButton *Button_play;
     QPushButton *Button_record;
     QPushButton *Button_replay;
@@ -39,18 +38,17 @@ public:
     QMenuBar *menuBar;
     QMenu *menuVersion_1_0;
     QStatusBar *statusBar;
-    QToolBar *mainToolBar;
 
-    void setupUi(QMainWindow *MainWindow)
+    void setupUi(QMainWindow *Program_One)
     {
-        if (MainWindow->objectName().isEmpty())
-            MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(489, 354);
-        centralWidget = new QWidget(MainWindow);
+        if (Program_One->objectName().isEmpty())
+            Program_One->setObjectName(QStringLiteral("Program_One"));
+        Program_One->resize(500, 350);
+        centralWidget = new QWidget(Program_One);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        Button_next = new QPushButton(centralWidget);
-        Button_next->setObjectName(QStringLiteral("Button_next"));
-        Button_next->setGeometry(QRect(420, 210, 51, 31));
+        Button_start = new QPushButton(centralWidget);
+        Button_start->setObjectName(QStringLiteral("Button_start"));
+        Button_start->setGeometry(QRect(200, 80, 81, 51));
         Button_play = new QPushButton(centralWidget);
         Button_play->setObjectName(QStringLiteral("Button_play"));
         Button_play->setGeometry(QRect(80, 260, 61, 21));
@@ -62,53 +60,50 @@ public:
         Button_replay->setGeometry(QRect(330, 260, 61, 21));
         image = new QLabel(centralWidget);
         image->setObjectName(QStringLiteral("image"));
-        image->setGeometry(QRect(100, 0, 261, 181));
+        image->setGeometry(QRect(110, 0, 261, 181));
         text = new QLabel(centralWidget);
         text->setObjectName(QStringLiteral("text"));
-        text->setGeometry(QRect(80, 200, 311, 51));
+        text->setGeometry(QRect(80, 210, 311, 51));
         grade = new QLabel(centralWidget);
         grade->setObjectName(QStringLiteral("grade"));
         grade->setGeometry(QRect(410, 10, 54, 51));
-        MainWindow->setCentralWidget(centralWidget);
-        menuBar = new QMenuBar(MainWindow);
+        Program_One->setCentralWidget(centralWidget);
+        menuBar = new QMenuBar(Program_One);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 489, 22));
+        menuBar->setGeometry(QRect(0, 0, 500, 22));
         menuVersion_1_0 = new QMenu(menuBar);
         menuVersion_1_0->setObjectName(QStringLiteral("menuVersion_1_0"));
-        MainWindow->setMenuBar(menuBar);
-        statusBar = new QStatusBar(MainWindow);
+        Program_One->setMenuBar(menuBar);
+        statusBar = new QStatusBar(Program_One);
         statusBar->setObjectName(QStringLiteral("statusBar"));
-        MainWindow->setStatusBar(statusBar);
-        mainToolBar = new QToolBar(MainWindow);
-        mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
-        MainWindow->addToolBar(Qt::TopToolBarArea, mainToolBar);
+        Program_One->setStatusBar(statusBar);
 
         menuBar->addAction(menuVersion_1_0->menuAction());
 
-        retranslateUi(MainWindow);
+        retranslateUi(Program_One);
 
-        QMetaObject::connectSlotsByName(MainWindow);
+        QMetaObject::connectSlotsByName(Program_One);
     } // setupUi
 
-    void retranslateUi(QMainWindow *MainWindow)
+    void retranslateUi(QMainWindow *Program_One)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
-        Button_next->setText(QApplication::translate("MainWindow", "Next", Q_NULLPTR));
-        Button_play->setText(QApplication::translate("MainWindow", "Play", Q_NULLPTR));
-        Button_record->setText(QApplication::translate("MainWindow", "Record", Q_NULLPTR));
-        Button_replay->setText(QApplication::translate("MainWindow", "Replay", Q_NULLPTR));
+        Program_One->setWindowTitle(QApplication::translate("Program_One", "MainWindow", Q_NULLPTR));
+        Button_start->setText(QApplication::translate("Program_One", "Start", Q_NULLPTR));
+        Button_play->setText(QApplication::translate("Program_One", "Play", Q_NULLPTR));
+        Button_record->setText(QApplication::translate("Program_One", "Record", Q_NULLPTR));
+        Button_replay->setText(QApplication::translate("Program_One", "Replay", Q_NULLPTR));
         image->setText(QString());
         text->setText(QString());
         grade->setText(QString());
-        menuVersion_1_0->setTitle(QApplication::translate("MainWindow", "Version 1.0", Q_NULLPTR));
+        menuVersion_1_0->setTitle(QApplication::translate("Program_One", "Version 1.0", Q_NULLPTR));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class MainWindow: public Ui_MainWindow {};
+    class Program_One: public Ui_Program_One {};
 } // namespace Ui
 
 QT_END_NAMESPACE
 
-#endif // UI_MAINWINDOW_H
+#endif // UI_PROGRAM_ONE_H

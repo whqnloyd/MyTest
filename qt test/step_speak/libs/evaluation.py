@@ -13,7 +13,7 @@ def evaluation():
         spch_text = f.read()
     user = spch_text.split(' ')
 
-    if len(user) < len(temp):
+    if len(user) < (len(temp) + 3):
         for i in user:
             for ii in temp:
                 if i == ii:
