@@ -1,9 +1,9 @@
 import cv2
 
+cam = cv2.VideoCapture(0)
+
 face_haar = cv2.CascadeClassifier("C:/Users/Luodai Yang/Anaconda3/Lib/site-packages/cv2/data/haarcascade_frontalface_default.xml")
 eye_haar = cv2.CascadeClassifier("C:/Users/Luodai Yang/Anaconda3/Lib/site-packages/cv2/data/haarcascade_eye.xml")
-
-cam = cv2.VideoCapture(0)
 
 while True:
     ret,img = cam.read()
