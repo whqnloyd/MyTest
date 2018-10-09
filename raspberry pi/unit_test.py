@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+import math
 
 cap = cv2.VideoCapture(0)
 
@@ -32,22 +33,23 @@ def rotate(img, ang, center=None, scale=None):
 def transfer_image(image_roied):
     # GRAY处理，HSV处理
     gray_image = cv2.cvtColor(image_roied, cv2.COLOR_BGR2GRAY)
-#    hsv_image = cv2.cvtColor(image_roied, cv2.COLOR_BGR2HSV)
-    '''
-    # black lines
-    lower_range = np.array([0, 0, 0], dtype='uint8')
-    upper_range = np.array([180, 255, 46], dtype='uint8')
-    mask_black = cv2.inRange(hsv_image, lower_range, upper_range)
-    '''    
-    mask_white = cv2.inRange(gray_image, 200, 255)
+    hsv_image = cv2.cvtColor(image_roied, cv2.COLOR_BGR2HSV)
+
+    #hsv
+    lower_black = np.array([0, 0, 0], dtype='uint8')
+    upper_black = np.array([180, 60, 130], dtype='uint8')
+    hsv_black = cv2.inRange(hsv_image, lower_black, upper_black)
     
-#    mask_bw = cv2.bitwise_or(mask_white, mask_black)
-#    mask_bw_image = cv2.bitwise_and(gray_image, mask_bw)
+    #gray
+    gray_black = cv2.inRange(gray_image, 15, 125)
+    
+    #mask_image = cv2.bitwise_or(hsv_black, gray_black)
+    mask_image = cv2.bitwise_and(hsv_black, gray_black)
 
     # 高斯降噪
-    gauss_image1 = cv2.GaussianBlur(mask_white, (5, 5), 15)
-#    gauss_image = cv2.GaussianBlur(mask_bw_image, (5, 5), 0)
-    return gauss_image1
+    gauss_image = cv2.GaussianBlur(mask_image, (5, 5), 3)
+
+    return gauss_image
 
 
 #改变探测区域
@@ -55,22 +57,27 @@ def region_of_interest(imgs, vertices):
     roi_mask = np.zeros_like(imgs)
     channel_count = 2
     match_maks_color = (255,) * channel_count
+    
     cv2.fillPoly(roi_mask, vertices, match_maks_color)
-    #cv2.fillPoly(roi_mask, vertices, 1)
+    
     masked_image = cv2.bitwise_and(imgs, roi_mask)
     return masked_image
 
 
-#检测边缘及线段
-def find_edg_lines(img):
+#检测边缘
+def find_edg(img):
     # 检测边缘
     low_threshold = 100
     high_threshold = 200
     cannyed_edges = cv2.Canny(img, low_threshold, high_threshold)
+    
+    return cannyed_edges
 
+#find the lines
+def find_lines(img):
     # 霍夫变换，找到边缘对应的直线段
     lines = cv2.HoughLinesP(
-        cannyed_edges,
+        img,
         rho=6,
         theta=np.pi / 60,
         threshold=160,
@@ -78,13 +85,70 @@ def find_edg_lines(img):
         minLineLength=40,
         maxLineGap=25
     )
-    return lines, cannyed_edges
+    
+    return lines
 
+#绘制直线
+def pipline(image, lines_):
+        if lines_ is None:
+            return
+    
+        left_line_x = []
+        left_line_y = []
+        right_line_x = []
+        right_line_y = []
+        
+        for line in lines_:
+            for x1, y1, x2, y2 in line:
+                slope = (y2 - y1) / (x2 - x1)
+                if math.fabs(slope) < 0.5:
+                    continue
+                elif slope < 0:
+                    left_line_x.extend([x1, x2])
+                    left_line_y.extend([y1, y2])
+                elif slope > 0:
+                    right_line_x.extend([x1, x2])
+                    right_line_y.extend([y1, y2])
+        
+        if left_line_x.size == 0 and right_line_x.size == 0:
+            return
+        
+        min_y = int(image.shape[0] * (3/5))
+        max_y = int(image.shape[0])
+        
+        poly_left = np.poly1d(np.polyfit(
+                left_line_y,
+                left_line_x,
+                deg = 1
+            ))
+        
+        left_x_start = int(poly_left(max_y))
+        left_x_end = int(poly_left(min_y))
+        
+        poly_right = np.poly1d(np.polyfit(
+                right_line_y,
+                right_line_x,
+                deg = 1
+            ))
+        
+        right_x_start = int(poly_right(max_y))
+        right_x_end = int(poly_right(min_y))
+        
+        line_image = draw_lines(
+            image,
+            [[
+                [left_x_start, max_y, left_x_end, min_y],
+                [right_x_start, max_y, right_x_end, min_y],
+            ]],
+            )
+        
+        return line_image
 
 #绘制直线
 def draw_lines(images, lines_, color=[255, 0, 0], thickness=3):
     if lines_ is None:
         return
+    
     img = np.copy(images)
     line_img = np.zeros((img.shape[0], img.shape[1], 3), dtype=np.uint8, )
     for line in lines_:
@@ -100,15 +164,17 @@ while True:
     img = rotate(frame, angle)
     #图片处理
     image_color_gray = transfer_image(img)
-    #得到线段
-    lines, img_canny = find_edg_lines(image_color_gray)
+    #得到线段value
+    img_canny = find_edg(image_color_gray)
     #改变探测区域
     image_roied = region_of_interest(img_canny, np.array([region_of_interest_vertices], np.int32))
+    #find lines
+    lines = find_lines(image_roied)
     #绘制直线
-    line_image = draw_lines(img, lines)
+    lines_image = pipline(img, lines)
     #显示图像
-    if line_image is not None:
-        cv2.imshow("capture", image_roied)
+    if lines_image is not None:
+        cv2.imshow("capture", lines_image)
     else:
         cv2.imshow("capture", img)
     
