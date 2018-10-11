@@ -88,8 +88,8 @@ def find_lines(img):
     
     return lines
 
-#绘制直线
-def pipline(image, lines_):
+#fine line
+def lines_fine(image, lines_):
         if lines_ is None:
             return
     
@@ -110,11 +110,11 @@ def pipline(image, lines_):
                     right_line_x.extend([x1, x2])
                     right_line_y.extend([y1, y2])
         
-        if left_line_x.size == 0 and right_line_x.size == 0:
-            return
+        #if left_line_x.size == 0 and right_line_x.size == 0:
+        #    return
         
-        min_y = int(image.shape[0] * (3/5))
-        max_y = int(image.shape[0])
+        min_y = int(image.shape[0] * (65/100))
+        max_y = int(image.shape[0] * (100/100))
         
         poly_left = np.poly1d(np.polyfit(
                 left_line_y,
@@ -134,6 +134,21 @@ def pipline(image, lines_):
         right_x_start = int(poly_right(max_y))
         right_x_end = int(poly_right(min_y))
         
+        #instruction line
+        mid_line_start_x = int((left_x_start + right_x_start)/2)
+        mid_line_start_y = max_y
+        mid_line_end_x = int((left_x_end + right_x_end)/2)
+        mid_line_end_y = min_y
+        
+        data_line = [[
+                [left_x_start, max_y, left_x_end, min_y],
+                [right_x_start, max_y, right_x_end, min_y],
+                [mid_line_start_x, max_y, mid_line_end_x, min_y]
+            ]]
+        
+        return data_line
+    
+        '''
         line_image = draw_lines(
             image,
             [[
@@ -143,7 +158,17 @@ def pipline(image, lines_):
             )
         
         return line_image
-
+        '''
+        
+def intruct_line(lines_):
+        for lines in lines_:
+            
+            x_start = 0
+            y_start = 0
+            x_end = 0
+            y_end = 0
+        
+        
 #绘制直线
 def draw_lines(images, lines_, color=[255, 0, 0], thickness=3):
     if lines_ is None:
@@ -170,11 +195,15 @@ while True:
     image_roied = region_of_interest(img_canny, np.array([region_of_interest_vertices], np.int32))
     #find lines
     lines = find_lines(image_roied)
-    #绘制直线
-    lines_image = pipline(img, lines)
+    #find two lines
+    all_lines = lines_fine(img, lines)
+    #find instruction line
+    #instruction_line = intruct_line()
+    #
+    final_image = draw_lines(img, all_lines)
     #显示图像
-    if lines_image is not None:
-        cv2.imshow("capture", lines_image)
+    if final_image is not None:
+        cv2.imshow("capture", final_image)
     else:
         cv2.imshow("capture", img)
     
