@@ -122,7 +122,7 @@ def lines_fine(image, lines_):
                         right_line_y.extend([y1, y2])
                 else: continue
         
-        if (left_line_y is None) or (right_line_y is None):
+        if (not left_line_y) or (not right_line_y):
             return
         
         #y position
@@ -169,23 +169,24 @@ def lines_fine(image, lines_):
                 [right_x_start, max_y, right_x_end, min_y],
             ]
         
-        return fix_line, edge_line, mid_line
-      
-def mid_line_anal(line_):
-    if line_ is None:
-        return
-    
-    #for x1, y1, x2, y2 in line_:
+        all_lines = [fix_line, mid_line, edge_line]
+        
+        return all_lines
         
 #绘制直线
-def draw_lines(images, lines_, color=[255, 0, 0], thickness=3):
+def draw_lines(images, lines_, thickness=3):
     if lines_ is None:
         return
     
+    i=0
+    colors = [[0,0,255],[0,255,0],[255,0,0]]
     img = np.copy(images)
     line_img = np.zeros((img.shape[0], img.shape[1], 3), dtype=np.uint8, )
-    for x1, y1, x2, y2 in lines_:
-            cv2.line(line_img, (x1, y1), (x2, y2), color, thickness)
+    for line in lines_:
+        for x1, y1, x2, y2 in line:
+            cv2.line(line_img, (x1, y1), (x2, y2), colors[i], thickness)
+        i = i+1
+    
     img = cv2.addWeighted(img, 0.8, line_img, 1.0, 0.0)
     return img
 
@@ -202,19 +203,20 @@ while True:
     image_roied = region_of_interest(img_canny, np.array([region_of_interest_vertices], np.int32))
     #find lines
     lines = find_lines(image_roied)
-    #find two lines
-    fix_line, edge_lines, mid_line = lines_fine(img, lines)
-    #find instruction line
-    #instruction_line = intruct_line()
-    #
-    edge_image = draw_lines(img, edge_lines)
-    mid_image = draw_lines(edge_image, mid_line, [0, 255, 0])
-    fix_image = draw_lines(mid_image, fix_line, [0, 0, 255])
-    #显示图像
-    if fix_image is not None:
-        cv2.imshow("capture", fix_image)
+    if lines.all():
+        #find fine lines
+        lines_all= lines_fine(img, lines)
+        if lines_all:
+            final_image = draw_lines(img, lines_all)
+            #显示图像
+            if final_image is not None:
+                cv2.imshow("capture", final_image)
+            else:
+                cv2.imshow("capture", img)
+        else:
+                cv2.imshow("capture", img)
     else:
-        cv2.imshow("capture", img)
+                cv2.imshow("capture", img)
     
     if cv2.waitKey(1) & 0xFF == ord('`'):
         break
