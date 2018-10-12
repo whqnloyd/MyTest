@@ -16,7 +16,8 @@ cap.set(cv2.CAP_PROP_FPS, fps)
 region_of_interest_vertices = [(3, height), (3, height-20), (width / 2, height / 2 + 30), (width, height-20), (width, height),]
 
 #rotate picture
-def rotate(img, ang, center=None, scale=None): 
+def rotate(img, ang, center=None, scale=None):
+    
     (h, w) = img.shape[:2] 
     if center == None:
         center = (w // 2, h // 2)
@@ -31,6 +32,9 @@ def rotate(img, ang, center=None, scale=None):
 
 #对图片进行灰度和颜色处理
 def transfer_image(image_roied):
+    if image_roied is None:
+        return
+    
     # GRAY处理，HSV处理
     gray_image = cv2.cvtColor(image_roied, cv2.COLOR_BGR2GRAY)
     hsv_image = cv2.cvtColor(image_roied, cv2.COLOR_BGR2HSV)
@@ -43,7 +47,6 @@ def transfer_image(image_roied):
     #gray
     gray_black = cv2.inRange(gray_image, 15, 125)
     
-    #mask_image = cv2.bitwise_or(hsv_black, gray_black)
     mask_image = cv2.bitwise_and(hsv_black, gray_black)
 
     # 高斯降噪
@@ -54,6 +57,7 @@ def transfer_image(image_roied):
 
 #改变探测区域
 def region_of_interest(imgs, vertices):
+    
     roi_mask = np.zeros_like(imgs)
     channel_count = 2
     match_maks_color = (255,) * channel_count
@@ -66,6 +70,9 @@ def region_of_interest(imgs, vertices):
 
 #检测边缘
 def find_edg(img):
+    if img is None:
+        return
+    
     # 检测边缘
     low_threshold = 100
     high_threshold = 200
@@ -75,6 +82,9 @@ def find_edg(img):
 
 #find the lines
 def find_lines(img):
+    if img is None:
+        return
+    
     # 霍夫变换，找到边缘对应的直线段
     lines = cv2.HoughLinesP(
         img,
@@ -100,22 +110,26 @@ def lines_fine(image, lines_):
         
         for line in lines_:
             for x1, y1, x2, y2 in line:
-                slope = (y2 - y1) / (x2 - x1)
-                if math.fabs(slope) < 0.5:
-                    continue
-                elif slope < 0:
-                    left_line_x.extend([x1, x2])
-                    left_line_y.extend([y1, y2])
-                elif slope > 0:
-                    right_line_x.extend([x1, x2])
-                    right_line_y.extend([y1, y2])
+                if ((x2-x1) != 0):
+                    slope = (y2 - y1) / (x2 - x1)
+                    if math.fabs(slope) < 0.5:
+                        continue
+                    elif slope < 0:
+                        left_line_x.extend([x1, x2])
+                        left_line_y.extend([y1, y2])
+                    elif slope > 0:
+                        right_line_x.extend([x1, x2])
+                        right_line_y.extend([y1, y2])
+                else: continue
         
-        #if left_line_x.size == 0 and right_line_x.size == 0:
-        #    return
+        if (left_line_y is None) or (right_line_y is None):
+            return
         
+        #y position
         min_y = int(image.shape[0] * (65/100))
         max_y = int(image.shape[0] * (100/100))
         
+        #x position
         poly_left = np.poly1d(np.polyfit(
                 left_line_y,
                 left_line_x,
@@ -134,40 +148,34 @@ def lines_fine(image, lines_):
         right_x_start = int(poly_right(max_y))
         right_x_end = int(poly_right(min_y))
         
-        #instruction line
+        #mid line
         mid_line_start_x = int((left_x_start + right_x_start)/2)
-        mid_line_start_y = max_y
+        mid_line_start_y = max_y - 20
         mid_line_end_x = int((left_x_end + right_x_end)/2)
-        mid_line_end_y = min_y
+        mid_line_end_y = min_y + 20
         
-        data_line = [[
+        mid_line = [[mid_line_start_x,
+                     mid_line_start_y,
+                     mid_line_end_x,
+                     mid_line_end_y]]
+        
+        fix_line = [[int(image.shape[1]/2),
+                     mid_line_end_y+20,
+                     int(image.shape[1]/2),
+                     mid_line_start_y-20]]
+        
+        edge_line = [
                 [left_x_start, max_y, left_x_end, min_y],
                 [right_x_start, max_y, right_x_end, min_y],
-                [mid_line_start_x, max_y, mid_line_end_x, min_y]
-            ]]
+            ]
         
-        return data_line
+        return fix_line, edge_line, mid_line
+      
+def mid_line_anal(line_):
+    if line_ is None:
+        return
     
-        '''
-        line_image = draw_lines(
-            image,
-            [[
-                [left_x_start, max_y, left_x_end, min_y],
-                [right_x_start, max_y, right_x_end, min_y],
-            ]],
-            )
-        
-        return line_image
-        '''
-        
-def intruct_line(lines_):
-        for lines in lines_:
-            
-            x_start = 0
-            y_start = 0
-            x_end = 0
-            y_end = 0
-        
+    #for x1, y1, x2, y2 in line_:
         
 #绘制直线
 def draw_lines(images, lines_, color=[255, 0, 0], thickness=3):
@@ -176,8 +184,7 @@ def draw_lines(images, lines_, color=[255, 0, 0], thickness=3):
     
     img = np.copy(images)
     line_img = np.zeros((img.shape[0], img.shape[1], 3), dtype=np.uint8, )
-    for line in lines_:
-        for x1, y1, x2, y2 in line:
+    for x1, y1, x2, y2 in lines_:
             cv2.line(line_img, (x1, y1), (x2, y2), color, thickness)
     img = cv2.addWeighted(img, 0.8, line_img, 1.0, 0.0)
     return img
@@ -196,14 +203,16 @@ while True:
     #find lines
     lines = find_lines(image_roied)
     #find two lines
-    all_lines = lines_fine(img, lines)
+    fix_line, edge_lines, mid_line = lines_fine(img, lines)
     #find instruction line
     #instruction_line = intruct_line()
     #
-    final_image = draw_lines(img, all_lines)
+    edge_image = draw_lines(img, edge_lines)
+    mid_image = draw_lines(edge_image, mid_line, [0, 255, 0])
+    fix_image = draw_lines(mid_image, fix_line, [0, 0, 255])
     #显示图像
-    if final_image is not None:
-        cv2.imshow("capture", final_image)
+    if fix_image is not None:
+        cv2.imshow("capture", fix_image)
     else:
         cv2.imshow("capture", img)
     
