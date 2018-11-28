@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
 
@@ -25,15 +26,26 @@ init = tf.initialize_all_variables()
 sess = tf.Session()
 sess.run(init)
 
+detail_accuracy = []
+ys = []
+n = 0
 # 循环训练并评估
 for i in range(1000):
     batch_xs, batch_ys = mnist.train.next_batch(60)
     sess.run(train_step, feed_dict={x: batch_xs, labels: batch_ys})
-    if i % 100 == 0:
+    if i % 20 == 0:
         correct_prediction = tf.equal(tf.argmax(y1, 1), tf.argmax(labels, 1))
         accu_set = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
-        correct_rate = sess.run(accu_set, feed_dict={x: mnist.test.images, labels: mnist.test.labels})
-        print('测试集准确率：%.2f' % (correct_rate * 100), '%')
+        #correct_rate = sess.run(accu_set, feed_dict={x: mnist.test.images, labels: mnist.test.labels})
+        correct_rate = sess.run(accu_set, feed_dict={x: batch_xs, labels: batch_ys})
+        print('accuracy for test data：%.2f' % (correct_rate * 100), '%')
+        n = n + 1
+        detail_accuracy.append(correct_rate * 100)
+        ys.append(n)
+
+plt.figure()
+plt.plot(ys, detail_accuracy)
+plt.show()
 
 # 保存训练好的模型
 model_path = 'model/NN_one_layer'

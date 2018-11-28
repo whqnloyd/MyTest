@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{b63dd6ab-f3fa-4c4d-b21f-11d67fe649b0}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>atestmodule.py</StartupFile>
+    <SearchPath>..\ai test\</SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>Global|PythonCore|3.6</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="find_x output exe\input.txt" />
+    <Content Include="find_x output exe\output.txt" />
+    <Content Include="newtext.txt" />
+    <Content Include="text.txt" />
+    <Content Include="textnew.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="atestmodule.py" />
+    <Compile Include="basic class.py" />
+    <Compile Include="decorator.py" />
+    <Compile Include="different class.py" />
+    <Compile Include="find_x.py" />
+    <Compile Include="import.py" />
+    <Compile Include="likeswim.py" />
+    <Compile Include="listmayberight.py" />
+    <Compile Include="myiotest.py" />
+    <Compile Include="myiotest02.py" />
+    <Compile Include="myiotest03.py" />
+    <Compile Include="myiotest04.py" />
+    <Compile Include="setup.py" />
+    <Compile Include="test001.py" />
+    <Compile Include="test01.py" />
+    <Compile Include="test02.py" />
+    <Compile Include="test03.py" />
+    <Compile Include="testclass.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="find_x output exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.6" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>

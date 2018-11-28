@@ -1,2 +1,2 @@
-model_checkpoint_path: "RNN_MNIST-1000"
-all_model_checkpoint_paths: "RNN_MNIST-1000"
+model_checkpoint_path: "NN_one_layer-1000"
+all_model_checkpoint_paths: "NN_one_layer-1000"
