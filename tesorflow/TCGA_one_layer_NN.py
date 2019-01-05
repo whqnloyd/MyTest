@@ -71,8 +71,8 @@ sess.run(init)
 # 循环训练并评估
 with open('data/train_TCGA_x.txt', 'r') as train_data:
     with open('data/train_TCGA_label.txt', 'r') as train_labels:
-        for i in range(59):
-            batch_size = 3
+        for i in range(2):
+            batch_size = 80
             xs = train_batch_x(train_data, batch_size)
             ys = train_batch_label(train_labels, batch_size)
             train_step.run(feed_dict={x: xs, labels: ys})

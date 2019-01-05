@@ -114,7 +114,7 @@ loss = -tf.reduce_sum(labels*tf.log(y))
 # loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits_v2(logits=y, labels=labels))        # sum和mean的区别
 
 # 梯度下降最小化成本
-train_step = tf.train.GradientDescentOptimizer(0.01).minimize(loss)
+train_step = tf.train.GradientDescentOptimizer(0.001).minimize(loss)
 
 # 评估模型
 correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(labels, 1))
@@ -128,8 +128,8 @@ sess.run(init)
 # 循环训练并评估
 with open('data/train_TCGA_x.txt', 'r') as train_data:
     with open('data/train_TCGA_label.txt', 'r') as train_labels:
-        for i in range(59):
-            batch_size = 3
+        for i in range(4):
+            batch_size = 40
             xs = train_batch_x(train_data, batch_size)
             ys = train_batch_label(train_labels, batch_size)
             train_step.run(feed_dict={x: xs, labels: ys, keep_prob: 1.0})
