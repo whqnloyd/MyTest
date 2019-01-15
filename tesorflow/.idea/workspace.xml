@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="78dd5626-8bda-41de-93c3-9909252bbf59" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TCGA_CNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/TCGA_CNN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TCGA_one_layer_NN.py" beforeDir="false" afterPath="$PROJECT_DIR$/TCGA_one_layer_NN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NN_one_layer.py" beforeDir="false" afterPath="$PROJECT_DIR$/NN_one_layer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/NN_one_layer-1000.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/model/NN_one_layer-1000.data-00000-of-00001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/NN_one_layer-1000.index" beforeDir="false" afterPath="$PROJECT_DIR$/model/NN_one_layer-1000.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/NN_one_layer-1000.meta" beforeDir="false" afterPath="$PROJECT_DIR$/model/NN_one_layer-1000.meta" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,84 +18,41 @@
     <session id="974823638">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.0" value="1" />
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.2" value="2" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gz" value="1" />
-          <entry key="py" value="3" />
+          <entry key="py" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="3" />
+          <entry key="Python" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="1222" />
+          <entry key="dummy" value="22" />
+          <entry key="py" value="1530" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="1222" />
+          <entry key="PLAIN_TEXT" value="22" />
+          <entry key="Python" value="1530" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TCGA_one_layer_NN.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="77" column="51" selection-start-line="77" selection-start-column="51" selection-end-line="77" selection-end-column="51" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TCGA_CNN.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="132" column="48" selection-start-line="132" selection-start-column="48" selection-end-line="132" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NN_one_layer_stock.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NN_one_layer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -122,7 +81,6 @@
         <option value="$PROJECT_DIR$/RNN_write.py" />
         <option value="$PROJECT_DIR$/RNN_words.py" />
         <option value="$PROJECT_DIR$/RNN.py" />
-        <option value="$PROJECT_DIR$/NN_one_layer.py" />
         <option value="$PROJECT_DIR$/NN_multiple_layers.py" />
         <option value="$PROJECT_DIR$/CNN_MNIST.py" />
         <option value="$PROJECT_DIR$/TCGA.py" />
@@ -140,13 +98,20 @@
         <option value="$PROJECT_DIR$/NN_one_layer_stock.py" />
         <option value="$PROJECT_DIR$/TCGA_one_layer_NN.py" />
         <option value="$PROJECT_DIR$/TCGA_CNN.py" />
+        <option value="$PROJECT_DIR$/NN_one_layer.py" />
+        <option value="$PROJECT_DIR$/../../QUAZAR/NN/NN_one_layer_stock.py" />
+        <option value="$PROJECT_DIR$/genetic_algorithm_stock.py" />
+        <option value="$PROJECT_DIR$/genetic_algorithm_path.py" />
+        <option value="$PROJECT_DIR$/genetic_algorithm_phrase.py" />
+        <option value="$PROJECT_DIR$/genetic_algorithm_point.py" />
+        <option value="$PROJECT_DIR$/MGA.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -182,21 +147,6 @@
               <item name="tesorflow" type="b2602c69:ProjectViewProjectNode" />
               <item name="tesorflow" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="tesorflow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tesorflow" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tesorflow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tesorflow" type="462c0819:PsiDirectoryNode" />
-              <item name="MNIST_data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tesorflow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tesorflow" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -205,7 +155,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../QUAZAR/NN/NN_one_layer_stock.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -220,8 +170,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.TCGA_CNN">
-    <configuration name="NN_one_layer" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.MGA">
+    <configuration name="MGA" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="tesorflow" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -233,7 +183,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/NN_one_layer.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MGA.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -242,7 +192,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="NN_one_layer_stock" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="genetic_algorithm_path" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="tesorflow" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -254,7 +204,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/NN_one_layer_stock.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/genetic_algorithm_path.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -263,7 +213,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="TCGA_CNN" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="genetic_algorithm_phrase" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="tesorflow" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -275,7 +225,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TCGA_CNN.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/genetic_algorithm_phrase.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -284,7 +234,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="TCGA_one_layer_NN" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="genetic_algorithm_point" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="tesorflow" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -296,7 +246,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TCGA_one_layer_NN.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/genetic_algorithm_point.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -305,7 +255,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test for generator" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="genetic_algorithm_stock" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="tesorflow" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -317,7 +267,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test for generator.py" />
+      <option name="SCRIPT_NAME" value="D:\Projects\MyTest\tesorflow\genetic_algorithm_point.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -327,19 +277,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.test for generator" />
-      <item itemvalue="Python.NN_one_layer_stock" />
-      <item itemvalue="Python.NN_one_layer" />
-      <item itemvalue="Python.TCGA_one_layer_NN" />
-      <item itemvalue="Python.TCGA_CNN" />
+      <item itemvalue="Python.genetic_algorithm_stock" />
+      <item itemvalue="Python.genetic_algorithm_phrase" />
+      <item itemvalue="Python.genetic_algorithm_path" />
+      <item itemvalue="Python.genetic_algorithm_point" />
+      <item itemvalue="Python.MGA" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.TCGA_CNN" />
-        <item itemvalue="Python.TCGA_one_layer_NN" />
-        <item itemvalue="Python.NN_one_layer" />
-        <item itemvalue="Python.NN_one_layer_stock" />
-        <item itemvalue="Python.test for generator" />
+        <item itemvalue="Python.MGA" />
+        <item itemvalue="Python.genetic_algorithm_point" />
+        <item itemvalue="Python.genetic_algorithm_phrase" />
+        <item itemvalue="Python.genetic_algorithm_path" />
+        <item itemvalue="Python.genetic_algorithm_stock" />
       </list>
     </recent_temporary>
   </component>
@@ -377,15 +327,14 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22192867" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21047008" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3296355" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30212766" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.22478071" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2982456" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.33755943" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -490,13 +439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NN_multiple_layers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1219">
-          <caret line="61" column="81" selection-start-line="61" selection-start-column="81" selection-end-line="61" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/tensorflow/python/framework/ops.py" />
     <entry file="file://$PROJECT_DIR$/batch read.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -536,50 +478,89 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MNIST_data/t10k-images-idx3-ubyte.gz">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TCGA_one_layer_NN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2052">
+          <caret line="77" column="51" selection-start-line="77" selection-start-column="51" selection-end-line="77" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TCGA_CNN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="132" column="48" selection-start-line="132" selection-start-column="48" selection-end-line="132" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NN_one_layer_stock.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NN_one_layer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test for generator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
+        <state relative-caret-position="81">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MNIST_data/t10k-images-idx3-ubyte.gz">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NN_one_layer.py">
+    <entry file="file://$PROJECT_DIR$/NN_multiple_layers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        <state relative-caret-position="569">
+          <caret line="69" column="34" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../QUAZAR/NN/NN_one_layer_stock.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genetic_algorithm_point.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genetic_algorithm_path.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NN_one_layer_stock.py">
+    <entry file="file://$PROJECT_DIR$/MGA.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+        <state relative-caret-position="81">
+          <caret line="3" column="37" lean-forward="true" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TCGA_one_layer_NN.py">
+    <entry file="file://$PROJECT_DIR$/genetic_algorithm_phrase.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="77" column="51" selection-start-line="77" selection-start-column="51" selection-end-line="77" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TCGA_CNN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="132" column="48" selection-start-line="132" selection-start-column="48" selection-end-line="132" selection-end-column="48" />
+        <state relative-caret-position="162">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
         </state>
       </provider>
     </entry>
