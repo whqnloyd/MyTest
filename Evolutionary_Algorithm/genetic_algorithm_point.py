@@ -50,7 +50,7 @@ for _ in range(N_GENERATIONS):
 
     # something about plotting
     sca = plt.scatter(translateDNA(pop), F_values, s=200, lw=0, c='red', alpha=0.5)
-    plt.pause(0.05)
+    plt.pause(0.1)
     if 'sca' in globals():
         sca.remove()
 

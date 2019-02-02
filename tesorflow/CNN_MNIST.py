@@ -72,7 +72,7 @@ loss = -tf.reduce_sum(labels*tf.log(y))
 # loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits_v2(logits=y, labels=labels))        # sum和mean的区别
 
 # 梯度下降最小化成本
-train_step = tf.train.GradientDescentOptimizer(0.01).minimize(loss)
+train_step = tf.train.GradientDescentOptimizer(0.0001).minimize(loss)
 
 # 评估模型
 correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(labels, 1))
@@ -101,4 +101,4 @@ print('测试集准确率：%.2f' % (test_accuracy * 100), '%')
 # 保存训练好的模型
 model_path = 'model/CNN_MNIST'
 saver = tf.train.Saver()
-save_path = saver.save(sess, model_path, global_step=1000)
+save_path = saver.save(sess, model_path)
