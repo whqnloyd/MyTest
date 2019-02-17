@@ -41,11 +41,7 @@ FORMS += \
 RESOURCES += \
           res.qrc
 
+win32: LIBS += -LC:/Users/yangl/AppData/Local/Programs/Python/Python36/libs/ -lpython36
 
-win32: LIBS += -L$$PWD/../../../AppData/Local/Programs/Python/Python36/libs/ -lpython36
-
-INCLUDEPATH += $$PWD/../../../AppData/Local/Programs/Python/Python36/include
-DEPENDPATH += $$PWD/../../../AppData/Local/Programs/Python/Python36/include
-
-win32:!win32-g++: PRE_TARGETDEPS += $$PWD/../../../AppData/Local/Programs/Python/Python36/libs/python36.lib
-else:win32-g++: PRE_TARGETDEPS += $$PWD/../../../AppData/Local/Programs/Python/Python36/libs/libpython36.a
+INCLUDEPATH += C:/Users/yangl/AppData/Local/Programs/Python/Python36/include
+DEPENDPATH += C:/Users/yangl/AppData/Local/Programs/Python/Python36/include

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'program_one.ui'
 **
-** Created by: Qt User Interface Compiler version 5.6.3
+** Created by: Qt User Interface Compiler version 5.10.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -87,15 +87,15 @@ public:
 
     void retranslateUi(QMainWindow *Program_One)
     {
-        Program_One->setWindowTitle(QApplication::translate("Program_One", "MainWindow", Q_NULLPTR));
-        Button_start->setText(QApplication::translate("Program_One", "Start", Q_NULLPTR));
-        Button_play->setText(QApplication::translate("Program_One", "Play", Q_NULLPTR));
-        Button_record->setText(QApplication::translate("Program_One", "Record", Q_NULLPTR));
-        Button_replay->setText(QApplication::translate("Program_One", "Replay", Q_NULLPTR));
+        Program_One->setWindowTitle(QApplication::translate("Program_One", "MainWindow", nullptr));
+        Button_start->setText(QApplication::translate("Program_One", "Start", nullptr));
+        Button_play->setText(QApplication::translate("Program_One", "Play", nullptr));
+        Button_record->setText(QApplication::translate("Program_One", "Record", nullptr));
+        Button_replay->setText(QApplication::translate("Program_One", "Replay", nullptr));
         image->setText(QString());
         text->setText(QString());
         grade->setText(QString());
-        menuVersion_1_0->setTitle(QApplication::translate("Program_One", "Version 1.0", Q_NULLPTR));
+        menuVersion_1_0->setTitle(QApplication::translate("Program_One", "Version 1.0", nullptr));
     } // retranslateUi
 
 };

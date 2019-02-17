@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'choose_lesson.ui'
 **
-** Created by: Qt User Interface Compiler version 5.6.3
+** Created by: Qt User Interface Compiler version 5.10.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -74,9 +74,9 @@ public:
 
     void retranslateUi(QMainWindow *Choose_Lesson)
     {
-        Choose_Lesson->setWindowTitle(QApplication::translate("Choose_Lesson", "MainWindow", Q_NULLPTR));
-        start->setText(QApplication::translate("Choose_Lesson", "Start", Q_NULLPTR));
-        menu->setTitle(QApplication::translate("Choose_Lesson", "\351\200\211\346\213\251\344\275\240\347\232\204\350\257\276\347\250\213\345\222\214\347\250\213\345\272\217", Q_NULLPTR));
+        Choose_Lesson->setWindowTitle(QApplication::translate("Choose_Lesson", "MainWindow", nullptr));
+        start->setText(QApplication::translate("Choose_Lesson", "Start", nullptr));
+        menu->setTitle(QApplication::translate("Choose_Lesson", "\351\200\211\346\213\251\344\275\240\347\232\204\350\257\276\347\250\213\345\222\214\347\250\213\345\272\217", nullptr));
     } // retranslateUi
 
 };

@@ -7,11 +7,14 @@ N_GENERATIONS = 200
 MUT_STRENGTH = 5.        # initial step size (dynamic mutation strength)
 
 
-def F(x): return np.sin(10*x)*x + np.cos(2*x)*x     # to find the maximum of this function
+# to find the maximum of this function
+def F(x):
+    return np.sin(10*x)*x + np.cos(2*x)*x
 
 
 # find non-zero fitness for selection
-def get_fitness(pred): return pred.flatten()
+def get_fitness(pred):
+    return pred.flatten()
 
 
 def make_kid(parent):

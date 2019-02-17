@@ -12,7 +12,7 @@ class Program_One : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit Program_One(QWidget *parent = 0);
+    explicit Program_One(QWidget *parent = nullptr);
     ~Program_One();
 
 private:

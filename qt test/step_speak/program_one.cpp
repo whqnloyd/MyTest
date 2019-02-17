@@ -50,7 +50,7 @@ void Program_One::start_clicked()
     }
     //给出调用模块的路径并导入
     PyRun_SimpleString("import sys");
-    PyRun_SimpleString("sys.path.append('C:/Users/Luodai Yang/Projects/AI-functions/step_speak/libs')");
+    PyRun_SimpleString("sys.path.append('D:/Projects/MyTest/qt test/step_speak/libs')");
     PyObject* pmodule = PyImport_ImportModule("googleTTS");
     if (!pmodule)
     {
@@ -65,7 +65,7 @@ void Program_One::start_clicked()
         return;
     }
     //调用hello函数
-    PyObject_CallFunction(phello,"s,","C:/Users/Luodai Yang/Projects/AI-functions/step_speak/data/text/L1.txt");
+    PyObject_CallFunction(phello,"s,","D:/Projects/MyTest/qt test/step_speak/data/text/L1.txt");
     //释放python
     Py_Finalize();
 }
@@ -80,7 +80,7 @@ void Program_One::play_clicked()
     }
     //给出调用模块的路径并导入
     PyRun_SimpleString("import sys");
-    PyRun_SimpleString("sys.path.append('C:/Users/Luodai Yang/Projects/AI-functions/step_speak/libs')");
+    PyRun_SimpleString("sys.path.append('D:/Projects/MyTest/qt test/step_speak/libs')");
     PyObject* pmodule = PyImport_ImportModule("playaudio");
     if (!pmodule)
     {
@@ -111,7 +111,7 @@ void Program_One::record_clicked()
     }
     //给出调用模块的路径并导入
     PyRun_SimpleString("import sys");
-    PyRun_SimpleString("sys.path.append('C:/Users/Luodai Yang/Projects/AI-functions/step_speak/libs')");
+    PyRun_SimpleString("sys.path.append('D:/Projects/MyTest/qt test/step_speak/libs')");
     PyObject* pmodule1 = PyImport_ImportModule("record_speech");
     if (!pmodule1)
     {
@@ -126,7 +126,7 @@ void Program_One::record_clicked()
         return;
     }
     //调用hello函数
-    PyObject_CallFunction(phello1,"i,s",10,"C:/Users/Luodai Yang/Projects/AI-functions/step_speak/data/audio/speech.wav");
+    PyObject_CallFunction(phello1,"i,s",10,"D:/Projects/MyTest/qt test/step_speak/step_speak/data/audio/speech.wav");
     //释放python
     Py_Finalize();
 
@@ -138,7 +138,7 @@ void Program_One::record_clicked()
     }
     //给出调用模块的路径并导入
     PyRun_SimpleString("import sys");
-    PyRun_SimpleString("sys.path.append('C:/Users/Luodai Yang/Projects/AI-functions/step_speak/libs')");
+    PyRun_SimpleString("sys.path.append('D:/Projects/MyTest/qt test/step_speak/libs')");
     PyObject* pmodule2 = PyImport_ImportModule("googleSTT");
     if (!pmodule2)
     {
@@ -165,7 +165,7 @@ void Program_One::record_clicked()
     }
     //给出调用模块的路径并导入
     PyRun_SimpleString("import sys");
-    PyRun_SimpleString("sys.path.append('C:/Users/Luodai Yang/Projects/AI-functions/step_speak/libs')");
+    PyRun_SimpleString("sys.path.append('D:/Projects/MyTest/qt test/step_speak/step_speak/libs')");
     PyObject* pmodule3 = PyImport_ImportModule("evaluation");
     if (!pmodule3)
     {
@@ -205,7 +205,7 @@ void Program_One::replay_clicked()
     }
     //给出调用模块的路径并导入
     PyRun_SimpleString("import sys");
-    PyRun_SimpleString("sys.path.append('C:/Users/Luodai Yang/Projects/AI-functions/step_speak/libs')");
+    PyRun_SimpleString("sys.path.append('D:/Projects/MyTest/qt test/step_speak/step_speak/libs')");
     PyObject* pmodule = PyImport_ImportModule("replay_speech");
     if (!pmodule)
     {
@@ -220,7 +220,7 @@ void Program_One::replay_clicked()
         return;
     }
     //调用hello函数
-    PyObject_CallFunction(phello,"s","C:/Users/Luodai Yang/Projects/AI-functions/step_speak/data/audio/speech.wav");
+    PyObject_CallFunction(phello,"s","D:/Projects/MyTest/qt test/step_speak/step_speak/data/audio/speech.wav");
     //释放python
     Py_Finalize();
 }

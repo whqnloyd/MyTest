@@ -23,8 +23,8 @@ def make_kid(pop, n_kid):
         p1, p2 = np.random.choice(np.arange(POP_SIZE), size=2, replace=False)
         cp = np.random.randint(0, 2, DNA_SIZE, dtype=np.bool)  # crossover points
         kv[cp] = pop['DNA'][p1, cp]
-        kv[~cp] = pop['DNA'][p2, ~cp]
         ks[cp] = pop['mut_strength'][p1, cp]
+        kv[~cp] = pop['DNA'][p2, ~cp]
         ks[~cp] = pop['mut_strength'][p2, ~cp]
 
         # mutate (change DNA based on normal distribution)
@@ -55,7 +55,7 @@ plt.plot(x, F(x))
 for _ in range(N_GENERATIONS):
     # something about plotting
     sca = plt.scatter(pop['DNA'], F(pop['DNA']), s=200, lw=0, c='red', alpha=0.5);
-    plt.pause(0.05)
+    plt.pause(0.1)
     if 'sca' in globals():
         sca.remove()
 
