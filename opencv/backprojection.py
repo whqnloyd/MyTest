@@ -22,7 +22,7 @@ roihist = cv2.calcHist([hsv_roi], [0, 1], None, [180, 256], [0, 180, 0, 256])
 dst = cv2.calcBackProject([hsv_target], [0, 1], roihist, [0, 180, 0, 256], 1)
 
 # Now convolute with circular disc
-disc = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (7, 7))
+disc = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (10, 10))
 cv2.filter2D(dst, -1, disc, dst)
 
 # threshold and binary AND
