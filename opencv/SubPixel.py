@@ -3,14 +3,14 @@ import numpy as np
 np.set_printoptions(threshold=np.inf)
 np.set_printoptions(linewidth=np.inf)
 
-path = 'image/dog.jpg'
+path = 'opencv-data/chessboard/left01.jpg'
 image = cv2.imread(path)
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
-ret, gray_rev = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV)
-kernel_fine = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (10, 10))
-gray_rev = cv2.morphologyEx(gray_rev, cv2.MORPH_CLOSE, kernel_fine)
-ret, gray = cv2.threshold(gray_rev, 0, 255, cv2.THRESH_BINARY_INV)
+#ret, gray_rev = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV)
+#kernel_fine = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (10, 10))
+#gray_rev = cv2.morphologyEx(gray_rev, cv2.MORPH_CLOSE, kernel_fine)
+#ret, gray = cv2.threshold(gray_rev, 0, 255, cv2.THRESH_BINARY_INV)
 
 gray = np.float32(gray)
 dst = cv2.cornerHarris(gray, 3, 3, 0.04)
