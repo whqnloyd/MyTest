@@ -53,6 +53,6 @@ plt.plot(x_axis, detail_accuracy_test, color='blue')
 plt.show()
 
 # 保存训练好的模型
-model_path = 'model/NN_one_layer'
-saver = tf.train.Saver()
-save_path = saver.save(sess, model_path, global_step=1000)
+# model_path = 'model/NN_one_layer'
+# saver = tf.train.Saver()
+# save_path = saver.save(sess, model_path, global_step=1000)
