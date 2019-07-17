@@ -15,10 +15,10 @@ kp2, des2 = orb.detectAndCompute(img2, None)
 
 # FLANN parameters
 FLANN_INDEX_LSH = 6
-index_params= dict(algorithm = FLANN_INDEX_LSH,
-                   table_number = 12, # 12
-                   key_size = 20,     # 20
-                   multi_probe_level = 2) #2
+index_params= dict(algorithm=FLANN_INDEX_LSH,
+                   table_number=12, # 12
+                   key_size=20,     # 20
+                   multi_probe_level=2) #2
 search_params = dict(checks=50)   # or pass empty dictionary
 
 flann = cv2.FlannBasedMatcher(index_params,search_params)
@@ -36,17 +36,17 @@ for i in matches:
         continue
 
 if len(good)>10:
-    src_pts = np.float32([ kp1[m.queryIdx].pt for m in good ]).reshape(-1,1,2)
-    dst_pts = np.float32([ kp2[m.trainIdx].pt for m in good ]).reshape(-1,1,2)
+    src_pts = np.float32([kp1[m.queryIdx].pt for m in good]).reshape(-1, 1, 2)
+    dst_pts = np.float32([kp2[m.trainIdx].pt for m in good]).reshape(-1, 1, 2)
 
-    M, mask = cv2.findHomography(src_pts, dst_pts, cv2.RANSAC,5.0)
+    M, mask = cv2.findHomography(src_pts, dst_pts, cv2.RANSAC, 5.0)
     matchesMask = mask.ravel().tolist()
 
-    h,w = img1.shape
-    pts = np.float32([ [0,0],[0,h-1],[w-1,h-1],[w-1,0] ]).reshape(-1,1,2)
-    dst = cv2.perspectiveTransform(pts,M)
+    h, w = img1.shape
+    pts = np.float32([[0, 0], [0, h-1], [w-1, h-1], [w-1, 0]]).reshape(-1, 1, 2)
+    dst = cv2.perspectiveTransform(pts, M)
 
-    img2 = cv2.polylines(img2,[np.int32(dst)],True,255,3, cv2.LINE_AA)
+    img2 = cv2.polylines(img2, [np.int32(dst)], True, 255, 3, cv2.LINE_AA)
 
 else:
     print("Not enough matches are found - %d/%d" % (len(good), 10))
