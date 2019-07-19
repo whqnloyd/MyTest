@@ -5,7 +5,7 @@ from matplotlib import pyplot as plt
 img1 = cv2.imread('opencv-data/myleft.jpg',0)  #queryimage # left image
 img2 = cv2.imread('opencv-data/myright.jpg',0) #trainimage # right image
 
-sift = cv2.SIFT()
+sift = cv2.xfeature2d.SIFT_creat()
 
 # find the keypoints and descriptors with SIFT
 kp1, des1 = sift.detectAndCompute(img1,None)
