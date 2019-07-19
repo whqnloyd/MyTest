@@ -1,0 +1,7 @@
+﻿  pybind11hello.cpp
+     Creating library D:\MyTest\pybind11hello\x64\Release\pybind11hello.lib and object D:\MyTest\pybind11hello\x64\Release\pybind11hello.exp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 2221 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  pybind11hello.vcxproj -> D:\MyTest\pybind11hello\x64\Release\pybind11hello.pyd

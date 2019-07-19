@@ -20,7 +20,7 @@ for frame in images:
     if ret == True:
         obj_points.append(objp)
         corners2 = cv2.cornerSubPix(gray_img, corners, (11, 11), (-1, -1), criteria)
-        img_points.append(corners)
+        img_points.append(corners2)
 #         cv2.drawChessboardCorners(img, (7, 6), corners2, ret)
 #         cv2.imshow('img', img)
 #         cv2.waitKey(0)

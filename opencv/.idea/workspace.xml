@@ -46,13 +46,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/OpticalFlow.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="280">
               <caret line="37" column="26" lean-forward="true" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+=======
+            <state relative-caret-position="219">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
+>>>>>>> Stashed changes
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OpticalFlow.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -99,30 +109,24 @@
       </list>
     </option>
   </component>
+<<<<<<< Updated upstream
   <component name="ProjectFrameBounds">
     <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
+=======
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="951" />
+    <option name="width" value="978" />
+    <option name="height" value="1039" />
+>>>>>>> Stashed changes
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="opencv" type="b2602c69:ProjectViewProjectNode" />
-              <item name="opencv" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -248,11 +252,19 @@
       <method v="2" />
     </configuration>
     <list>
+<<<<<<< Updated upstream
       <item itemvalue="Python.feature_match" />
       <item itemvalue="Python.good_feature_to_track" />
       <item itemvalue="Python.Meanshift" />
       <item itemvalue="Python.Camshift" />
       <item itemvalue="Python.OpticalFlow" />
+=======
+      <item itemvalue="Python.Camshift" />
+      <item itemvalue="Python.Meanshift" />
+      <item itemvalue="Python.ORB" />
+      <item itemvalue="Python.feature_match" />
+      <item itemvalue="Python.good_feature_to_track" />
+>>>>>>> Stashed changes
     </list>
     <recent_temporary>
       <list>
@@ -338,11 +350,22 @@
       <option name="project" value="LOCAL" />
       <updated>1563285203753</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="renew">
+      <created>1563373226963</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1563373226963</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< Updated upstream
     <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+=======
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+>>>>>>> Stashed changes
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.23717949" />
@@ -358,7 +381,11 @@
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49932885" weight="0.32904148" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.49932885" weight="0.32904148" />
+<<<<<<< Updated upstream
       <window_info active="true" anchor="bottom" id="Run" order="10" sideWeight="0.50201344" side_tool="true" visible="true" weight="0.2595838" />
+=======
+      <window_info anchor="bottom" id="Run" order="10" sideWeight="0.50201344" side_tool="true" weight="0.25751072" />
+>>>>>>> Stashed changes
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -573,13 +600,21 @@
     <entry file="file://$PROJECT_DIR$/feature_match.py" />
     <entry file="file://$PROJECT_DIR$/OpticalFlow.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="280">
           <caret line="37" column="26" lean-forward="true" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+=======
+        <state relative-caret-position="219">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+>>>>>>> Stashed changes
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OpticalFlow.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
