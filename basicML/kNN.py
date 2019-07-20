@@ -20,8 +20,8 @@ newcomer = np.random.randint(0,100,(1,2)).astype(np.float32)
 plt.scatter(newcomer[:,0],newcomer[:,1],80,'g','o')
 
 knn = cv2.ml.KNearest_create()
-knn.train(trainData,responses)
-ret, results, neighbours, dist = knn.find_nearest(newcomer, 3)
+knn.train(trainData, cv2.ml.ROW_SAMPLE, responses)
+ret, results, neighbours, dist = knn.findNearest(newcomer, k=5)
 
 print("result: ", results,"\n")
 print("neighbours: ", neighbours,"\n")
