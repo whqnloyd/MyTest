@@ -142,7 +142,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\opencv\opencv-3.4.6\build\install\include\opencv2;D:\opencv\opencv-3.4.6\build\install\include\opencv;D:\opencv\opencv-3.4.6\build\install\include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\MyTest\c++workspace\c++workspace;D:\opencv\opencv-3.4.6\build\install\include\opencv2;D:\opencv\opencv-3.4.6\build\install\include\opencv;D:\opencv\opencv-3.4.6\build\install\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -155,6 +155,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="c++workspace.cpp" />
+    <ClCompile Include="gray-mix.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="gray-mix.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
