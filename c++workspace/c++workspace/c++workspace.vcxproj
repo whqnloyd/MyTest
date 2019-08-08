@@ -81,6 +81,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.exe</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -149,13 +150,12 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>D:\opencv\opencv-3.4.6\build\install\x64\vc16\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opencv_core346.lib;opencv_highgui346.lib;opencv_ml346.lib;opencv_imgproc346.lib;opencv_video346.lib;opencv_calib3d346.lib;opencv_dnn346.lib;opencv_features2d346.lib;opencv_flann346.lib;opencv_imgcodecs346.lib;opencv_objdetect346.lib;opencv_photo346.lib;opencv_shape346.lib;opencv_stitching346.lib;opencv_superres346.lib;opencv_videoio346.lib;opencv_videostab346.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\MyTest\c++workspace\c++workspace;D:\opencv\opencv-3.4.6\build\install\x64\vc16\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>c++workspace.lib;opencv_core346.lib;opencv_highgui346.lib;opencv_ml346.lib;opencv_imgproc346.lib;opencv_video346.lib;opencv_calib3d346.lib;opencv_dnn346.lib;opencv_features2d346.lib;opencv_flann346.lib;opencv_imgcodecs346.lib;opencv_objdetect346.lib;opencv_photo346.lib;opencv_shape346.lib;opencv_stitching346.lib;opencv_superres346.lib;opencv_videoio346.lib;opencv_videostab346.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="c++workspace.cpp" />
-    <ClCompile Include="gray-mix.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="gray-mix.h" />
