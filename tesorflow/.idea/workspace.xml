@@ -1,88 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78dd5626-8bda-41de-93c3-9909252bbf59" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../c++workspace/.vs/c++workspace/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../c++workspace/.vs/c++workspace/v16/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../c++workspace/.vs/c++workspace/v16/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../c++workspace/.vs/c++workspace/v16/Browse.VC.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../c++workspace/.vs/c++workspace/v16/ipch/AutoPCH/fca920b401b76403/C++WORKSPACE.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../c++workspace/.vs/c++workspace/v16/ipch/AutoPCH/fca920b401b76403/C++WORKSPACE.ipch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../c++workspace/c++workspace/c++workspace.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../c++workspace/c++workspace/c++workspace.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../c++workspace/c++workspace/c++workspace.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../c++workspace/c++workspace/c++workspace.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../c++workspace/c++workspace/c++workspace.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/../c++workspace/c++workspace/c++workspace.vcxproj.filters" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../c++workspace/c++workspace/x64/Release/c++workspace.log" beforeDir="false" afterPath="$PROJECT_DIR$/../c++workspace/c++workspace/x64/Release/c++workspace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../c++workspace/c++workspace/x64/Release/c++workspace.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../c++workspace/c++workspace/x64/Release/c++workspace.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../c++workspace/c++workspace/x64/Release/c++workspace.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../c++workspace/c++workspace/x64/Release/c++workspace.tlog/CL.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../c++workspace/c++workspace/x64/Release/c++workspace.tlog/c++workspace.write.1u.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../c++workspace/c++workspace/x64/Release/c++workspace.tlog/c++workspace.write.1u.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../c++workspace/c++workspace/x64/Release/c++workspace.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../c++workspace/c++workspace/x64/Release/c++workspace.tlog/link.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../c++workspace/c++workspace/x64/Release/vc142.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../c++workspace/c++workspace/x64/Release/vc142.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../c++workspace/x64/Release/c++workspace.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../c++workspace/x64/Release/c++workspace.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../c++workspace/x64/Release/c++workspace.iobj" beforeDir="false" afterPath="$PROJECT_DIR$/../c++workspace/x64/Release/c++workspace.iobj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../c++workspace/x64/Release/c++workspace.ipdb" beforeDir="false" afterPath="$PROJECT_DIR$/../c++workspace/x64/Release/c++workspace.ipdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../c++workspace/x64/Release/c++workspace.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../c++workspace/x64/Release/c++workspace.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/tesorflow.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CNN_MNIST.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MNIST_data/t10k-images-idx3-ubyte.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MNIST_data/t10k-labels-idx1-ubyte.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MNIST_data/train-images-idx3-ubyte.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MNIST_data/train-images.idx3-ubyte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MNIST_data/train-labels-idx1-ubyte.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NN_multiple_layers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NN_one_layer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NN_one_layer_stock.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RNN.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RNN_MNIST.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RNN_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RNN_test2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TCGA_CNN.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TCGA_one_layer_NN.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TCGA_three_layer_NN.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/acopy.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch read.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/example.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/input.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test_TCGA_label.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test_TCGA_x.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test_total.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_TCGA_label.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_TCGA_x.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_total.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/first test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/line close.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/CNN_MNIST-1000.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/CNN_MNIST-1000.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/CNN_MNIST-1000.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/NN_multiple_layers-1000.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/NN_multiple_layers-1000.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/NN_multiple_layers-1000.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/NN_one_layer-1000.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/NN_one_layer-1000.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/NN_one_layer-1000.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/RNN_MNIST-1000.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/RNN_MNIST-1000.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/RNN_MNIST-1000.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/checkpoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/multiple_layers-1000.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/multiple_layers-1000.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/multiple_layers-1000.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/mymodel-1000.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/mymodel-1000.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/mymodel-1000.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/one_layer-1000.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/one_layer-1000.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/one_layer-1000.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recognize.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test for generator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/text.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/training.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_data.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/txt_database.py" beforeDir="false" />
+    <list default="true" id="78dd5626-8bda-41de-93c3-9909252bbf59" name="Default" comment="renew keras">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tesorflow/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +12,32 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/box_train_predict.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2856">
+              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/csv_training.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2476">
+              <caret line="11" column="43" lean-forward="true" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -179,13 +125,23 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="tesorflow-keras" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tesorflow-keras" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tesorflow-keras" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -334,6 +290,14 @@
       <option name="presentableId" value="Default" />
       <updated>1528226107739</updated>
     </task>
+    <task id="LOCAL-00001" summary="renew keras">
+      <created>1565379059527</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1565379059527</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -360,7 +324,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16314399" />
-      <window_info id="Structure" order="1" weight="0.24966975" />
+      <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.22478071" />
@@ -397,6 +361,10 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout-to-restore>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="renew keras" />
+    <option name="LAST_COMMIT_MESSAGE" value="renew keras" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/tensorflow/python/ops/array_ops.py" />
     <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/tensorflow/python/framework/constant_op.py" />
@@ -432,7 +400,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/txt_database.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
+        <state relative-caret-position="207">
           <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
         </state>
       </provider>
@@ -460,13 +428,6 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/tensorflow/python/framework/ops.py" />
-    <entry file="file://$PROJECT_DIR$/batch read.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="15" lean-forward="true" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../opencv/opencv test.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -481,13 +442,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1748">
           <caret line="76" column="7" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/acopy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -551,10 +505,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NN_one_layer.py">
+    <entry file="file://$PROJECT_DIR$/acopy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch read.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NN_one_layer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csv_training.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2476">
+          <caret line="11" column="43" lean-forward="true" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/box_train_predict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2856">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
