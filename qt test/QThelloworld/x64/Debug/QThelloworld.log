@@ -1,0 +1,7 @@
+﻿  Generate moc_predefs.h
+  Uic'ing mainwindow.ui...
+  Moc'ing mainwindow.h...
+  main.cpp
+  mainwindow.cpp
+  moc_mainwindow.cpp
+  QThelloworld.vcxproj -> D:\Personal-Projects\MyTest\qt test\QThelloworld\debug\QThelloworld.exe
