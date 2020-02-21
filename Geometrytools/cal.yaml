@@ -1,0 +1,19 @@
+Camera1:
+  ImageSize: [ 640, 480 ]
+  Topic: '/usb_cam1/image_raw'
+  ROI: [ -26.896521, 38.625593 ]
+  CameraMat: [ [488.951688, 0., 340.278428], [0., 488.196830, 229.958649], [0., 0., 1.] ]
+  Transformation:
+    Rotation: [-90.00001, 0.00031, 179.98814]
+    Translation: [0.00215, -0.120332, -0.049821]
+    DistCoeff: [ -0.006141, 0.028335, -0.001433, -0.002261, 0. ]
+
+Camera2:
+  ImageSize: [ 640, 480 ]
+  Topic: '/usb_cam2/image_raw'
+  ROI: [ -26.896521, 38.625593 ]
+  CameraMat: [ [488., 0., 340.], [0., 488., 229.], [0., 0., 1.] ]
+  Transformation:
+    Rotation: [-90.00001, 0., 179.]
+    Translation: [0.002, -0.1, -0.04]
+    DistCoeff: [ -0.006, 0.02, -0.001, -0.002, 0. ]
